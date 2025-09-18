@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Panel</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Admin Panel</h1>
+<label>Password:</label>
+<input type="password" id="adminPassword">
+<button onclick="login()">Login</button>
+
+<div id="adminControls" style="display:none;">
+<label>Channel:</label>
+<select id="channelSelectAdmin">
+<option value="general">General</option>
+<option value="random">Random</option>
+<option value="ai">AI</option>
+</select>
+
+<button onclick="fetchMessages()">Refresh</button>
+<div id="adminMessages" style="max-height:400px; overflow-y:auto; border:1px solid #ccc;padding:10px;"></div>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>
