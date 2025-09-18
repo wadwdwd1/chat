@@ -12,7 +12,7 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.static('public'));
 
 // Configuration for SSL
-const ssl = true; // Set this to false if you don't want SSL
+const ssl = false; // Set this to false if you don't want SSL
 
 // Read Gemini API key optionally
 let GEMINI_API_KEY = null;
@@ -120,7 +120,7 @@ app.post('/ai', async (req, res) => {
 });
 
 // SSL and HTTP Logic
-const PORT = process.env.PORT || 13551; // Default to port 443 for HTTPS
+const PORT = process.env.PORT || 3000; // Default to port 443 for HTTPS
 
 // Check for SSL certificates and configure server accordingly
 const certsDir = path.join(process.cwd(), 'certs');
